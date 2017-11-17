@@ -9,12 +9,22 @@ namespace BuzzJean.Controllers
 {
     public class MakeController : Controller
     {
+        DbConnection newConnection = new DbConnection();
+
         // GET: Make
         public ActionResult Index()
         {
-            DbConnection newConnection = new DbConnection();
             List<Quiz> quizzes = newConnection.Quizzes.ToList();
             return View(quizzes);
+        }
+
+        // GET: Make/Quiz/:id
+        public ActionResult Quiz(int id)
+        {
+            //find which quiz
+            Quiz currentQuiz = newConnection.Quizzes.Find(id);
+            //pass quiz to view
+            return View(currentQuiz);
         }
 
         // GET: Make/Create
@@ -31,9 +41,6 @@ namespace BuzzJean.Controllers
             //create a new quiz
             Quiz newQuiz = new Quiz();
             newQuiz.title = title;
-
-            //create an instance of the DBConnection
-            DbConnection newConnection = new DbConnection();
 
             //save the quiz in the db
             newConnection.Quizzes.Add(newQuiz);

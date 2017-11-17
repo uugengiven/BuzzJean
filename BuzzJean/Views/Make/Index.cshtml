@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<BuzzJean.Models.Quiz>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -8,7 +9,9 @@
 <ul>
     @foreach (var quiz in Model)
     {
-        <li>@quiz.title</li>
+        <li>
+          <a href="/Make/quiz/@quiz.id">@quiz.title</a>
+        </li>
     }
 </ul>
 

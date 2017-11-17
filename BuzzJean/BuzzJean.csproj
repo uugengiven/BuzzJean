@@ -200,6 +200,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Make\Index.cshtml" />
     <Content Include="Views\Make\Create.cshtml" />
+    <Content Include="Views\Make\Quiz.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
