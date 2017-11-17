@@ -12,7 +12,9 @@ namespace BuzzJean.Controllers
         // GET: Make
         public ActionResult Index()
         {
-            return View();
+            DbConnection newConnection = new DbConnection();
+            List<Quiz> quizzes = newConnection.Quizzes.ToList();
+            return View(quizzes);
         }
 
         // GET: Make/Create
