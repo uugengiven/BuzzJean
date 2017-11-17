@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>BuzzJean</h1>
+    <p class="lead">Welcome to the premier application for creating and taking sweet quizzes</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @Html.ActionLink("Make a quiz!", "Index", "Make")
+    </div>
+    <div class="col-md-4">
+        @Html.ActionLink("Take a quiz!", "Index", "Take")
+    </div>
+    <div class="col-md-4">
+        @Html.ActionLink("See past results!", "Index", "Receipt")
+    </div>
+</div>
