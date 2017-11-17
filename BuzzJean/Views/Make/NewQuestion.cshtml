@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "NewQuestion";
+}
+
+<h2>Add a new Question to this quiz</h2>
+
+<form action="/Make/CreateQuestion" method="POST">
+    Question: <input name="question" type="text" />
+    <input name="quiz_id" type="hidden" value=@ViewBag.quiz_id />
+    <button type="submit">Create Question</button>
+</form>

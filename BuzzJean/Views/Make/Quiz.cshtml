@@ -6,6 +6,13 @@
 
 <h2>@Model.title</h2>
 
-Eventually this will list all the questions
+<ul>
+    @foreach (var question in Model.questions)
+    {
+        <li>
+            @question.question
+        </li>
+    }
+</ul>
 
-Here's where I want to add a new question
+<a href="/Make/NewQuestion/@Model.id">Add a new question</a>

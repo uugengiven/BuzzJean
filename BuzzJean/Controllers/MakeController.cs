@@ -49,5 +49,30 @@ namespace BuzzJean.Controllers
             //redirect to Index
             return RedirectToAction("Index");
         }
+
+        // GET: Make/NewQuestion/:id
+        [HttpGet]
+        public ActionResult NewQuestion(int id)
+        {
+            ViewBag.quiz_id = id;
+            return View();
+        }
+
+        // POST: Make/CreateQuestion
+        [HttpPost]
+        public ActionResult CreateQuestion(string question, int quiz_id)
+        {
+            //create a new question
+            Question newQuestion = new Question();
+            newQuestion.question = question;
+            newQuestion.quiz = newConnection.Quizzes.Find(quiz_id);
+
+            //save the question in the db
+            newConnection.Questions.Add(newQuestion);
+            newConnection.SaveChanges();
+
+            //redirect to quiz page
+            return RedirectToAction("Quiz", new { id = quiz_id });
+        }
     }
 }
