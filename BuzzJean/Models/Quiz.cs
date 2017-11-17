@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
 namespace BuzzJean.Models
 {
+    [Table("Quizzes")]
     public class Quiz
     {
         public int id { get; set; }

@@ -161,6 +161,10 @@
     <Compile Include="Migrations\201711171653294_AddQuestions.Designer.cs">
       <DependentUpon>201711171653294_AddQuestions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711171713299_ChangeQuizs.cs" />
+    <Compile Include="Migrations\201711171713299_ChangeQuizs.Designer.cs">
+      <DependentUpon>201711171713299_ChangeQuizs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -230,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711171653294_AddQuestions.resx">
       <DependentUpon>201711171653294_AddQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711171713299_ChangeQuizs.resx">
+      <DependentUpon>201711171713299_ChangeQuizs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
