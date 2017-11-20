@@ -1,0 +1,22 @@
+﻿@model BuzzJean.Models.Question
+
+@{
+    ViewBag.Title = "Add Answers";
+}
+<h2>@Model.question</h2>
+
+<!-- Show a list of all previous answers to the given question-->
+@foreach (var answer in Model.answers)
+{
+    <li>@answer.answer - @answer.value</li>
+}
+
+<!-- Show new answer form -->
+<form action="/Make/ConfirmAnswer" method="post">
+    Answer Text: <input type="text" name="answer" /> <br />
+    Answer Value: <input type="number" name="value" /> <br />
+    <input type="hidden" name="question_id" value="@Model.id" />
+    <button type="submit">Add Answer</button>
+</form>
+
+@Html.ActionLink("Back to Questions", "Quiz", "Make", new { id = Model.quiz.id }, new {@class = "btn btn-primary"})

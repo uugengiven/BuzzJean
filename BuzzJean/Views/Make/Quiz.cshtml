@@ -10,7 +10,7 @@
     @foreach (var question in Model.questions)
     {
         <li>
-            @question.question
+            <a href="/Make/newAnswer/@question.id">@question.question</a>
         </li>
     }
 </ul>

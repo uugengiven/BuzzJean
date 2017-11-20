@@ -74,5 +74,22 @@ namespace BuzzJean.Controllers
             //redirect to quiz page
             return RedirectToAction("Quiz", new { id = quiz_id });
         }
+
+        public ActionResult newAnswer(int id)
+        {
+            Question question = newConnection.Questions.Find(id);
+            return View(question);
+        }
+
+        public ActionResult ConfirmAnswer(string answer, int value, int question_id)
+        {
+            Answer temp = new Answer();
+            temp.answer = answer;
+            temp.value = value;
+            temp.question = newConnection.Questions.Find(question_id);
+            newConnection.Answers.Add(temp);
+            newConnection.SaveChanges();
+            return RedirectToAction("newAnswer", new { id = question_id});
+        }
     }
 }

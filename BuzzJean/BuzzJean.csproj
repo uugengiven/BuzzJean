@@ -165,6 +165,10 @@
     <Compile Include="Migrations\201711171713299_ChangeQuizs.Designer.cs">
       <DependentUpon>201711171713299_ChangeQuizs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711201443510_AddAnswersTable.cs" />
+    <Compile Include="Migrations\201711201443510_AddAnswersTable.Designer.cs">
+      <DependentUpon>201711201443510_AddAnswersTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -210,6 +214,7 @@
     <Content Include="Views\Make\Create.cshtml" />
     <Content Include="Views\Make\Quiz.cshtml" />
     <Content Include="Views\Make\NewQuestion.cshtml" />
+    <Content Include="Views\Make\newAnswer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711171713299_ChangeQuizs.resx">
       <DependentUpon>201711171713299_ChangeQuizs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711201443510_AddAnswersTable.resx">
+      <DependentUpon>201711201443510_AddAnswersTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
